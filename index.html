@@ -57,7 +57,8 @@
       border-radius: 1.25rem;
       overflow: hidden;
     }
-    figure img { display: block; width: 100%; height: auto; }
+    figure img,
+    figure video { display: block; width: 100%; height: auto; background: #fbf9f4; }
     figcaption {
       padding: 0.7rem 0.9rem;
       font-size: 0.8rem;
@@ -66,7 +67,6 @@
       text-transform: uppercase;
       color: var(--navy);
     }
-    .gif-wrap { max-width: 40rem; }
     .metrics {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -108,44 +108,26 @@
   </section>
 
   <section>
-    <h2>FAQ: плавное раскрытие</h2>
-    <p class="note">Ответ выезжает и сворачивается за ~350 мс. Плюс и минус остаются кругом 32×32, вопрос не прыгает.</p>
-    <figure class="gif-wrap">
-      <img src="img/faq-open.gif" alt="Плавное раскрытие и закрытие FAQ">
-      <figcaption>После · открытие и закрытие</figcaption>
-    </figure>
-  </section>
-
-  <section>
     <h2>FAQ: вопросы и плюс/минус</h2>
+    <p class="note">Слева кружок вытягивается, вопрос прыгает, текст КАПСОМ. Справа кружок 32×32, вопрос на месте, раскрытие плавное.</p>
     <div class="metrics">
       <div class="metric">
         <strong>До</strong>
-        Кружок 32×32 → 32×40. Строка 48 → 56. Вопросы КАПСОМ моноширинным.
+        Кружок 32×32 → 32×40. Строка 48 → 56.
       </div>
       <div class="metric">
         <strong>После</strong>
-        Кружок 32×32 в обоих состояниях. Строка 48 и 48. Обычный регистр, Manrope.
+        Кружок 32×32 в обоих состояниях. Строка 48 и 48.
       </div>
     </div>
     <div class="pair">
       <figure>
-        <img src="img/before-06-faq-closed.jpg" alt="FAQ закрыт до">
-        <figcaption>До · закрыто</figcaption>
+        <video src="img/faq-before.mp4" autoplay loop muted playsinline controls></video>
+        <figcaption>До · скачок при раскрытии</figcaption>
       </figure>
       <figure>
-        <img src="img/after-06-faq-closed.jpg" alt="FAQ закрыт после">
-        <figcaption>После · закрыто</figcaption>
-      </figure>
-    </div>
-    <div class="pair" style="margin-top:1rem">
-      <figure>
-        <img src="img/before-07-faq-open.jpg" alt="FAQ открыт до">
-        <figcaption>До · открыто, кружок вытянут</figcaption>
-      </figure>
-      <figure>
-        <img src="img/after-07-faq-open.jpg" alt="FAQ открыт после">
-        <figcaption>После · открыто, без скачка</figcaption>
+        <video src="img/faq-after.mp4" autoplay loop muted playsinline controls></video>
+        <figcaption>После · плавно, без скачка</figcaption>
       </figure>
     </div>
   </section>
